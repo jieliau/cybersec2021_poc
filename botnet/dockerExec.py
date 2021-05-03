@@ -18,7 +18,7 @@ try:
     ips.pop()
 
     for i in range(len(ips)):
-        threadjobs.append(threading.Thread(target = dockerexec(ip[i], img, cmd)))
+        threadjobs.append(threading.Thread(target = dockerexec(ips[i], img, cmd)))
         threadjobs[i].start()
 
     for i in range(len(ips)):
